@@ -1,52 +1,12 @@
-// /**
-//  * // This is MountainArray's API interface.
-//  * // You should not implement it, or speculate about its implementation
-//  * interface MountainArray {
-//  *     public int get(int index) {}
-//  *     public int length() {}
-//  * }
-//  */
- 
-// class Solution {
-//     public int findInMountainArray(int target, MountainArray mountainArr) {
-//         int value=-1;
-//         // finding peak index first
-//         int peak=searchpeak(mountainArr);
-//         //checking in first half
-//         ArrayList<Integer> listfirst=new ArrayList<>();
-//         for(int i=0;i<peak;i++){
-//             listfirst.add(mountainArr.get(i));
-//         }
-//         if(listfirst.contains(target)){
-//             return listfirst.indexOf(target);
-//         }
-//         //checking second half
-//         ArrayList<Integer> listsecond=new ArrayList<>();
-//         for(int i=peak;i<mountainArr.length();i++){
-//             listfirst.add(mountainArr.get(i));
-//         }
-//         if(listfirst.contains(target)){
-//             return listfirst.indexOf(target);
-//         }
-//         return -1;
-    
-        
-//     }
-//     public int searchpeak(MountainArray mountainArr){
-//         int start=0;
-//         int end=mountainArr.length()-1;
-//         while(start<end){
-//             int mid= start+(end-start)/2;
-//             if(mountainArr.get(mid)>mountainArr.get(mid+1)){
-//                 end=mid;
-//             }
-//             else{
-//                 start=mid+1;
-//             }
-//         }
-//         return start;
-//     }
-// }
+/**
+ * // This is MountainArray's API interface.
+ * // You should not implement it, or speculate about its implementation
+ * interface MountainArray {
+ *     public int get(int index) {}
+ *     public int length() {}
+ * }
+ */
+
 class Solution {
     public int findInMountainArray(int target, MountainArray mountainArr) {
         int peak = searchPeak(mountainArr);
